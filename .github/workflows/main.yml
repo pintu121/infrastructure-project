@@ -11,7 +11,7 @@ on:
   # AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS.SECRET_ACCESS_KEY }} 
   
 
-  jobs:
+jobs:
     build-infra:
       name: terraform-ci-cd
       runs-on: ubuntu-latest
