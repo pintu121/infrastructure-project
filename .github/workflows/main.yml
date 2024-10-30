@@ -9,7 +9,7 @@ on:
 env:
   AWS_ACCESS_KEY: ${{ secrets.ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }} 
-  AWS_REGION: us-east-1
+
   
 
 jobs:
@@ -19,9 +19,10 @@ jobs:
       steps:
         - name: Checkout
           uses: actions/checkout@v2
-        # - name: Configure AWS Credentials
-        #   uses: aws-actions/configure-aws-credentials@v4
-        #   with:
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v4
+          with:
+             AWS_REGION: us-east-1
         #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         - name: Set up Terraform
