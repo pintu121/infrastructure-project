@@ -1,5 +1,5 @@
 name: Terraform  CICD Pipeline for Deploying Aws Resources
-run-name: ${{ github.actor }} has triggered the Pipeline
+# run-name: ${{ github.actor }} has triggered the Pipeline
 
 on:
   push:
