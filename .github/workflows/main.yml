@@ -1,24 +1,19 @@
 name: Terraform  CICD Pipeline for Deploying Aws Resources
 run-name: ${{ github.actor }} has triggered the Pipeline
 
-
 on:
   push:
    branches:
       - main
+
 env:
   AWS_REGION: us-east-1
-
+#   AWS_ACCESS_KEY: ${{ secrets.ACCESS_KEY_ID }}
+#   AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }} 
 
 permissions:
   id-token: write
   contents: read
-
-# env:
-#   AWS_ACCESS_KEY: ${{ secrets.ACCESS_KEY_ID }}
-#   AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }} 
-
-  
 
 jobs:
     build-infra:
