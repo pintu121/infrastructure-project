@@ -37,7 +37,7 @@ on:
           id: plan
           run: terraform plan
           working-directory: ./Resource
-        - name: Terraform Apply
-          id: apply
-          run: terraform apply --auto-approve
-          working-directory: ./Resource
+        # - name: Terraform Apply
+        #   id: apply
+        #   run: terraform apply --auto-approve
+        #   working-directory: ./Resource
